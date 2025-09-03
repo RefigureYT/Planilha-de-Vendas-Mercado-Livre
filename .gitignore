@@ -1,5 +1,5 @@
 node_modules/
-XLSX_ML/*.xlsx
-XLSX_PRONTO/*.xlsx
-XLSX_FEITOS/*.xlsx
 creds.json
+XLSX_ML/*
+XLSX_PRONTO/*
+XLSX_FEITOS/*

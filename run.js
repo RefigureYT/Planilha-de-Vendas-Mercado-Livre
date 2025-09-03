@@ -8,6 +8,14 @@ const path_xlsx = "./XLSX_ML";
 const path_xlsx_pronto = "./XLSX_PRONTO";
 const path_xlsx_feitos = "./XLSX_FEITOS";
 
+const pastas = ['XLSX_ML', 'XLSX_PRONTO', 'XLSX_FEITOS'];
+pastas.forEach(pasta => {
+    if (!fs.existsSync(pasta)) {
+        fs.mkdirSync(pasta, { recursive: true });
+        console.log(`Pasta criada: ${pasta}`);
+    }
+});
+
 let raw = ""; // Conteúdo bruto do arquivo creds.json
 let creds = {}; // Objeto para armazenar as credenciais lidas do arquivo creds.json
 let authToken = ""; // Token de autenticação do Mercado Livre
@@ -154,9 +162,9 @@ async function start(xlsx_file, tokens) {
             fs.unlinkSync(origemPath);
             console.log(`Arquivo copiado e removido da origem (EXDEV): ${destinoPath}`);
         } else {
-            console.error(`Erro ao mover arquivo: ${err.message}`);      
-            process.exit(1);      
-        }        
+            console.error(`Erro ao mover arquivo: ${err.message}`);
+            process.exit(1);
+        }
     }
 
     process.exit(0);
