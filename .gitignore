@@ -1,0 +1,5 @@
+node_modules/
+XLSX_ML/*.xlsx
+XLSX_PRONTO/*.xlsx
+XLSX_FEITOS/*.xlsx
+creds.json

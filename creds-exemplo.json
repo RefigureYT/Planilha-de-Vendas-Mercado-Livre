@@ -1,0 +1,9 @@
+{
+    "db_api": {
+        "host": "localhost",
+        "port": "porta_aqui",
+        "user": "nome_do_usuario",
+        "password": "senha_aqui",
+        "database": "nome_do_banco"
+    }
+}
